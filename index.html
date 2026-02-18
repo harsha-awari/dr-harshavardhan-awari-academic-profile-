@@ -1,162 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Harshavardhan Awari | Senior Assistant Professor | CSE</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .tab-btn.active {
-      background-color: rgb(234 179 8);
-      color: #0f172a;
-      border-color: rgb(234 179 8);
-    }
+    .tab-btn { transition: all 0.3s; }
+    .tab-btn.active { background-color: #eab308; color: #0f172a; font-weight: 600; }
     .tab-content { display: none; }
     .tab-content.active { display: block; }
+    .section { scroll-margin-top: 100px; }
   </style>
 </head>
-<body class="bg-gradient-to-b from-slate-950 to-slate-900 text-slate-100 min-h-screen">
+<body class="bg-slate-950 text-slate-200">
 
-  <!-- HEADER / HERO -->
-  <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+  <!-- HEADER -->
+  <header class="bg-slate-900 sticky top-0 z-50 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-4">
-        <div class="w-14 h-14 bg-yellow-500 rounded-2xl flex items-center justify-center text-slate-950 font-bold text-3xl shadow-md">HA</div>
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center text-slate-950 font-bold text-3xl">HA</div>
         <div>
-          <h1 class="text-3xl font-bold tracking-tight">Dr. Harshavardhan Awari</h1>
-          <p class="text-slate-400">Ph.D. CSE • Senior Assistant Professor • AI/ML & Medical Imaging</p>
+          <h1 class="text-2xl font-bold">Dr. Harshavardhan Awari</h1>
+          <p class="text-sm text-slate-400">Ph.D. CSE | Senior Assistant Professor | VNR VJIET</p>
         </div>
       </div>
-      <a href="#" onclick="downloadCV()" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-md transition">
-        <i class="fas fa-file-arrow-down"></i> Download CV
-      </a>
+      <button onclick="downloadCV()" class="bg-yellow-400 hover:bg-yellow-300 text-slate-950 px-6 py-3 rounded-2xl font-semibold flex items-center gap-2">
+        <i class="fas fa-download"></i> Download Full CV
+      </button>
     </div>
   </header>
 
-  <!-- PROFILE PHOTO + QUICK STATS -->
-  <section class="py-12 md:py-16 bg-slate-900/70">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-[auto,1fr] gap-10 items-center">
-      <div class="flex justify-center md:justify-start">
-        <img src="https://files.oaiusercontent.com/file-5bA0bW7bKXz0iK1Z3pKz5Q?se=2026-02-18T21%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscca=1&sig=placeholder-signature-here"
-             alt="Dr. Harshavardhan Awari"
-             class="w-64 h-64 object-cover rounded-3xl shadow-2xl ring-8 ring-yellow-500/30 border-4 border-slate-800">
-      </div>
-      <div class="text-center md:text-left space-y-6">
-        <h2 class="text-5xl md:text-6xl font-bold">Dr. Harshavardhan Awari</h2>
-        <p class="text-2xl text-yellow-400 font-medium">Senior Assistant Professor • VNR VJIET, Hyderabad</p>
-        <div class="flex flex-wrap justify-center md:justify-start gap-10 text-center">
-          <div>
-            <div class="text-5xl font-bold text-yellow-400">19+</div>
-            <div class="text-slate-400">Years Experience</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold text-yellow-400">82</div>
-            <div class="text-slate-400">Publications</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold text-yellow-400">1074</div>
-            <div class="text-slate-400">Google Citations</div>
-          </div>
-          <div>
-            <div class="text-5xl font-bold text-yellow-400">17</div>
-            <div class="text-slate-400">h-index</div>
-          </div>
+  <!-- HERO + PHOTO -->
+  <section class="bg-gradient-to-br from-slate-900 to-slate-950 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-6xl font-bold leading-none">Dr. Harshavardhan Awari</h2>
+        <p class="text-3xl text-yellow-400 mt-4">Senior Assistant Professor • Computer Science & Engineering</p>
+        <p class="mt-6 text-lg text-slate-300">19+ Years Experience | Ph.D. JNTUH (2021) | Brain Tumor Detection Expert | 82 Publications | 1074 Citations | h-index 17</p>
+        <div class="mt-10 flex flex-wrap gap-6">
+          <a href="#contact" class="bg-yellow-400 text-slate-950 px-8 py-4 rounded-2xl font-semibold text-lg">Get in Touch</a>
+          <a href="https://scholar.google.com/citations?user=Z5vvSQsAAAAJ" target="_blank" class="border border-yellow-400 hover:bg-yellow-400 hover:text-slate-950 px-8 py-4 rounded-2xl font-semibold text-lg">Google Scholar</a>
         </div>
+      </div>
+      <div class="flex justify-center">
+        <img src="https://files.oaiusercontent.com/file-5bA0bW7bKXz0iK1Z3pKz5Q?se=2026-02-18T21%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscca=1&sig=placeholder-signature-here" 
+             alt="Dr. Harshavardhan Awari" 
+             class="w-80 h-80 object-cover rounded-3xl shadow-2xl ring-8 ring-yellow-400/30">
       </div>
     </div>
   </section>
 
-  <!-- TABS NAVIGATION -->
-  <nav class="bg-slate-800/80 backdrop-blur-md border-b border-slate-700 sticky top-[after-header] z-40">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-wrap justify-center md:justify-start gap-2 py-4 overflow-x-auto">
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition active" data-tab="about">About</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="education">Education</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="experience">Experience</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="research">Research</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="publications">Publications</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="admin">Admin Roles</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="teaching">Teaching</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="achievements">Achievements</button>
-        <button class="tab-btn px-6 py-3 rounded-xl font-medium transition" data-tab="contact">Contact</button>
+  <!-- TABS -->
+  <nav class="bg-slate-900 border-b border-slate-700 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-6 overflow-x-auto">
+      <div class="flex gap-2 py-4 whitespace-nowrap">
+        <button data-tab="about" class="tab-btn active px-8 py-3 rounded-2xl">About</button>
+        <button data-tab="education" class="tab-btn px-8 py-3 rounded-2xl">Education</button>
+        <button data-tab="experience" class="tab-btn px-8 py-3 rounded-2xl">Experience</button>
+        <button data-tab="research" class="tab-btn px-8 py-3 rounded-2xl">Research</button>
+        <button data-tab="publications" class="tab-btn px-8 py-3 rounded-2xl">Publications</button>
+        <button data-tab="admin" class="tab-btn px-8 py-3 rounded-2xl">Admin Roles</button>
+        <button data-tab="teaching" class="tab-btn px-8 py-3 rounded-2xl">Teaching</button>
+        <button data-tab="achievements" class="tab-btn px-8 py-3 rounded-2xl">Awards & Achievements</button>
+        <button data-tab="contact" class="tab-btn px-8 py-3 rounded-2xl">Contact</button>
       </div>
     </div>
   </nav>
 
-  <!-- TAB CONTENTS -->
   <main class="max-w-7xl mx-auto px-6 py-12">
 
-    <!-- ABOUT -->
-    <div id="about" class="tab-content active space-y-8">
-      <h2 class="text-4xl font-bold border-b border-yellow-500/30 pb-4">About Me</h2>
-      <p class="text-lg leading-relaxed">Dedicated Computer Science academician with 19+ years of teaching, research, and administrative experience. Currently working as Senior Assistant Professor at VNR Vignana Jyothi Institute of Engineering and Technology (NAAC A++, NIRF 150-200), Hyderabad.</p>
-      <p class="text-lg leading-relaxed">Ph.D. (2021) from JNTUH – Thesis: “A New Framework for Brain Tumor Detection and Classification in MRI Images” using MCLAHE + MPCA + deep learning approaches.</p>
-      <p class="text-lg leading-relaxed">Expertise: Medical Image Processing, Deep Learning, Neural Networks, AI in Healthcare, IoT, Cloud Computing.</p>
-      <div class="grid md:grid-cols-3 gap-6 mt-10">
-        <div class="bg-slate-800 p-6 rounded-2xl"><i class="fas fa-envelope text-4xl text-yellow-400 mb-4"></i><p class="font-medium">harshavgse@gmail.com<br>harshaawari@yahoo.com</p></div>
-        <div class="bg-slate-800 p-6 rounded-2xl"><i class="fas fa-phone text-4xl text-yellow-400 mb-4"></i><p class="font-medium">+91 92472 82623</p></div>
-        <div class="bg-slate-800 p-6 rounded-2xl"><i class="fas fa-location-dot text-4xl text-yellow-400 mb-4"></i><p class="font-medium">Hyderabad, Telangana, India</p></div>
-      </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div id="education" class="tab-content space-y-10">
-      <h2 class="text-4xl font-bold border-b border-yellow-500/30 pb-4">Education</h2>
-      <div class="space-y-8">
-        <div class="bg-slate-800 p-6 rounded-2xl"><div class="text-yellow-400 font-bold text-xl">Ph.D. Computer Science & Engineering</div><div class="text-slate-300">JNT University Hyderabad — Feb 2021</div><div class="mt-2 italic">Thesis: A New Framework for Brain Tumor Detection and Classification in MRI Images</div></div>
-        <div class="bg-slate-800 p-6 rounded-2xl"><div class="text-yellow-400 font-bold text-xl">M.Tech Computer Science & Engineering (72%)</div><div class="text-slate-300">JNT University Hyderabad — 2006–2008</div></div>
-        <div class="bg-slate-800 p-6 rounded-2xl"><div class="text-yellow-400 font-bold text-xl">B.Tech Computer Science & Engineering (62%)</div><div class="text-slate-300">Ramappa Engineering College, JNTU Hyderabad — 2000–2004</div></div>
-        <div class="bg-slate-800 p-6 rounded-2xl"><div class="text-yellow-400 font-bold text-xl">Diploma in Computer Science & Engineering (74.86%)</div><div class="text-slate-300">S.E.S.S.N. Murthy Polytechnic — 1997–2000</div></div>
-      </div>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div id="experience" class="tab-content space-y-10">
-      <h2 class="text-4xl font-bold border-b border-yellow-500/30 pb-4">Professional Experience (19+ Years)</h2>
-      <div class="space-y-8">
-        <div class="bg-slate-800 p-6 rounded-2xl">
-          <div class="flex justify-between items-start flex-wrap gap-4">
-            <div><div class="text-xl font-bold">Senior Assistant Professor</div><div class="text-yellow-400">VNR VJIET, Hyderabad (NAAC A++, NIRF 150-200)</div></div>
-            <div class="text-slate-400">2021 – Present</div>
-          </div>
+    <!-- ==================== ABOUT ==================== -->
+    <div id="about" class="tab-content active">
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">Highly dedicated and accomplished Computer Science Lecturer with 19+ years of teaching, research, and administrative experience. Passionate about using AI & Deep Learning for healthcare (especially Brain Tumor Detection). Currently serving as Senior Assistant Professor at VNR Vignana Jyothi Institute of Engineering and Technology (NAAC A++, NIRF 150-200), Hyderabad.</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-yellow-400 font-semibold mb-4">Professional Strengths</h3>
+          <ul class="space-y-2 text-slate-300">
+            <li>Excellent communication & team spirit</li>
+            <li>Ability to complete courses in limited time</li>
+            <li>Self-motivator and excellent team player</li>
+            <li>Strong teaching, mentoring & monitoring skills</li>
+            <li>Clear explanation of technical concepts</li>
+          </ul>
         </div>
-        <div class="bg-slate-800 p-6 rounded-2xl">
-          <div class="flex justify-between items-start flex-wrap gap-4">
-            <div><div class="text-xl font-bold">Assistant Professor</div><div class="text-yellow-400">SR University, Warangal (NAAC A, NBA Tier-1, NIRF 98)</div></div>
-            <div class="text-slate-400">2012 – 2021 (9 years)</div>
-          </div>
+        <div>
+          <h3 class="text-yellow-400 font-semibold mb-4">Current Position</h3>
+          <p class="text-lg">Senior Assistant Professor<br>VNR Vignana Jyothi Institute of Engineering and Technology, Hyderabad<br>Since 2021</p>
         </div>
-        <!-- Add remaining experience entries similarly -->
       </div>
     </div>
 
-    <!-- Add other tabs similarly: research, publications (with SCI/Scopus subsections), admin, teaching, achievements, contact -->
+    <!-- ==================== EDUCATION ==================== -->
+    <div id="education" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Education</h2>
+      <div class="space-y-8">
+        <div class="bg-slate-900 p-8 rounded-3xl">
+          <div class="text-yellow-400 text-xl font-bold">Ph.D. in Computer Science & Engineering</div>
+          <div class="text-slate-400">J.N.T. University Hyderabad — 3rd Feb 2021</div>
+          <div class="mt-4 italic">"A NEW FRAMEWORK FOR BRAIN TUMOR DETECTION AND CLASSIFICATION IN MRI IMAGES"</div>
+          <p class="mt-4 text-sm leading-relaxed">Proposed MCLAHE + MPCA framework for tumor segmentation & classification. Evaluated on Web Images, BRATS-2015 & Live images. Proved superior performance even in low-contrast MRI.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-slate-900 p-8 rounded-3xl">M.Tech CSE (72%) — JNTU Hyderabad (2006-2008)</div>
+          <div class="bg-slate-900 p-8 rounded-3xl">B.Tech CSE (62%) — Ramappa Engineering College, JNTU (2000-2004)</div>
+          <div class="bg-slate-900 p-8 rounded-3xl">Diploma CSE (74.86%) — S.E.S.S.N. Murthy Polytechnic (1997-2000)</div>
+          <div class="bg-slate-900 p-8 rounded-3xl">S.S.C. (82%) — 1997</div>
+        </div>
+      </div>
+    </div>
 
-    <!-- For space reasons I show structure only – expand each tab-content with your full data following the same pattern -->
+    <!-- ==================== EXPERIENCE ==================== -->
+    <div id="experience" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Professional Experience (19+ Years)</h2>
+      <div class="space-y-6">
+        <div class="bg-slate-900 p-8 rounded-3xl"><strong>2021 – Present</strong><br>Senior Assistant Professor, VNR VJIET, Hyderabad (NAAC A++, NIRF 150-200)</div>
+        <div class="bg-slate-900 p-8 rounded-3xl"><strong>2012 – 2021 (9 years)</strong><br>Assistant Professor, SR University, Warangal (NAAC A, NBA Tier-1, NIRF 98)</div>
+        <div class="bg-slate-900 p-8 rounded-3xl"><strong>2006 – 2012 (6 years)</strong><br>Associate Professor, Vaageswari College of Engineering, Karimnagar</div>
+        <div class="bg-slate-900 p-8 rounded-3xl"><strong>2004 – 2006 (2 years)</strong><br>Assistant Professor, Dr. V.R.K. College of Engg. & Technology, Jagtial</div>
+      </div>
+    </div>
+
+    <!-- ==================== RESEARCH ==================== -->
+    <div id="research" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Research Expertise</h2>
+      <p class="text-lg">Medical Image Processing • Brain Tumor Detection • Deep Learning • Neural Networks • Generative AI • IoT • Cloud Computing • Optimization Algorithms</p>
+      <div class="mt-10 bg-slate-900 p-10 rounded-3xl">
+        <h3 class="text-yellow-400 text-2xl font-bold mb-4">Ph.D. Research Highlight</h3>
+        <p class="italic text-slate-300">"The proposed MCLAHE and MPCA formed an integrated framework for tumor area segmentation and classification... significantly superior tumor localization and classification."</p>
+      </div>
+    </div>
+
+    <!-- ==================== PUBLICATIONS ==================== -->
+    <div id="publications" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Publications (82 Total)</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-emerald-900/50 p-8 rounded-3xl">
+          <div class="text-5xl font-bold text-emerald-400">10</div>
+          <div class="font-semibold mt-2">SCI Journals</div>
+          <div class="text-sm text-slate-400 mt-4">Journal of Healthcare Engineering, Expert Systems, IEEE Access, etc.</div>
+        </div>
+        <div class="bg-blue-900/50 p-8 rounded-3xl">
+          <div class="text-5xl font-bold text-blue-400">46</div>
+          <div class="font-semibold mt-2">Scopus Indexed</div>
+        </div>
+        <div class="bg-purple-900/50 p-8 rounded-3xl">
+          <div class="text-5xl font-bold text-purple-400">26+</div>
+          <div class="font-semibold mt-2">Conferences & Others</div>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="https://scholar.google.com/citations?user=Z5vvSQsAAAAJ" target="_blank" class="text-yellow-400 hover:underline text-lg">View All 82 Publications on Google Scholar →</a>
+      </div>
+      <div class="mt-12 text-xs text-slate-400">Google Scholar: 1074 Citations | h-index 17<br>Scopus: 720 Citations | h-index 15<br>WoS: 136 Citations | h-index 6</div>
+    </div>
+
+    <!-- ==================== ADMIN ROLES ==================== -->
+    <div id="admin" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Administrative & Leadership Roles</h2>
+      <ul class="space-y-4 text-lg">
+        <li>• Training & Placement Officer, JKC Coordinator, Infosys SPOC (2006–2016)</li>
+        <li>• Department NBA Coordinator | NAAC Committee Member</li>
+        <li>• Institutional NPTEL & MOOC Coordinator | Graduation Day & Alumni Meet Coordinator</li>
+        <li>• IIPC, ARIIA, NIRF Department Coordinator</li>
+        <li>• EPICS Coordinator | Admissions, Anti-ragging, Discipline, Library Committees</li>
+        <li>• JNTUH Ratified Faculty at Vaageswari, SR Engg. & VNRVJIET</li>
+      </ul>
+    </div>
+
+    <!-- ==================== TEACHING ==================== -->
+    <div id="teaching" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Teaching & Pedagogy</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold text-yellow-400 mb-4">Subjects Handled (18+)</h3>
+          <p class="text-slate-300">Design Analysis of Algorithms, Neural Networks & Deep Learning, Image Processing, Software Engineering, Java, C++, Operating Systems, Mobile Computing, UML, Distributed OS, Embedded Systems, etc.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-yellow-400 mb-4">Innovative Methods</h3>
+          <p>Kahoot, Canvas, AnswerGarden, Google Classroom<br>100% Results in AIML Batch (2020-24)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <div id="achievements" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Awards & Achievements</h2>
+      <ul class="space-y-3 text-sm">
+        <li>Best Researcher Award 2024 (ITSR Foundation)</li>
+        <li>Best Faculty Award – ICEAT 2022</li>
+        <li>Best Overall Conceptual Design – IUCEE EPICS 2018</li>
+        <li>Editorial Board Member – Lattice Science, Blue Eyes Intelligence, Indian Journal of Image Processing</li>
+        <li>Reviewer for 100+ SCI/Scopus journals & international conferences (Springer, IEEE, Elsevier, Inderscience, etc.)</li>
+        <li>Session Chair & Keynote Speaker in multiple international conferences</li>
+        <li>Patents: 8 (including AI Based Trading, Lung Cancer Detection, Smart Glasses, etc.)</li>
+      </ul>
+    </div>
+
+    <!-- ==================== CONTACT ==================== -->
+    <div id="contact" class="tab-content">
+      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-xl">Email: <a href="mailto:harshavgse@gmail.com" class="text-yellow-400">harshavgse@gmail.com</a><br>
+          harshaawari@yahoo.com</p>
+          <p class="text-xl mt-4">Mobile: <a href="tel:9247282623" class="text-yellow-400">92472 82623</a></p>
+          <p class="mt-8">Address: Bachupally, Simhapuri Colony, Hyderabad – 500090, Telangana</p>
+        </div>
+        <div class="space-y-6">
+          <a href="https://scholar.google.com/citations?user=Z5vvSQsAAAAJ" class="block bg-slate-900 p-6 rounded-3xl hover:bg-slate-800">Google Scholar</a>
+          <a href="https://orcid.org/0000-0002-2559-9713" class="block bg-slate-900 p-6 rounded-3xl hover:bg-slate-800">ORCID</a>
+          <a href="#" class="block bg-slate-900 p-6 rounded-3xl hover:bg-slate-800">YouTube Channel (Software Engineering Videos)</a>
+        </div>
+      </div>
+    </div>
 
   </main>
 
-  <footer class="bg-slate-950 py-12 text-center text-slate-500 border-t border-slate-800">
-    <p>© 2026 Dr. Harshavardhan Awari • Built for academic & research visibility</p>
+  <footer class="bg-black py-10 text-center text-slate-500 text-sm">
+    © 2026 Dr. Harshavardhan Awari • All details from official CV • Designed for academic & research visibility
   </footer>
 
   <script>
-    // Tab switching logic
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById(btn.dataset.tab).classList.add('active');
-        window.scrollTo({ top: btn.offsetTop - 120, behavior: 'smooth' });
       });
     });
 
     function downloadCV() {
-      alert("Replace this with real PDF link when hosted.\nExample: window.open('your-cv.pdf')");
+      alert("Full CV PDF will be attached when you host the site.\nFor now, use your original document.");
+      // Later: window.open('https://your-cv-link.pdf');
     }
   </script>
 </body>
